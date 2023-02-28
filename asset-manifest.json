@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/kinaxis-birthday-calendar-task/static/css/main.8d2b210f.css",
+    "main.js": "/kinaxis-birthday-calendar-task/static/js/main.8542f0df.js",
+    "static/js/787.0aac403c.chunk.js": "/kinaxis-birthday-calendar-task/static/js/787.0aac403c.chunk.js",
+    "index.html": "/kinaxis-birthday-calendar-task/index.html",
+    "main.8d2b210f.css.map": "/kinaxis-birthday-calendar-task/static/css/main.8d2b210f.css.map",
+    "main.8542f0df.js.map": "/kinaxis-birthday-calendar-task/static/js/main.8542f0df.js.map",
+    "787.0aac403c.chunk.js.map": "/kinaxis-birthday-calendar-task/static/js/787.0aac403c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8d2b210f.css",
+    "static/js/main.8542f0df.js"
+  ]
+}
