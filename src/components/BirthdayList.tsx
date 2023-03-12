@@ -13,14 +13,14 @@ import TablePagination from '@mui/material/TablePagination';
 import IconButton from '@mui/material/IconButton';
 import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
 import Favorite from '@mui/icons-material/Favorite';
-import dayjs, { Dayjs } from "dayjs";
+import { Dayjs } from "dayjs";
 import { getFormattedDate } from "../helper";
 import { TextField } from "@mui/material";
 
 function BirthdayList({currentDate, birthdays, addFavorite, removeFavorite, ...props}: BirthdayListProps) {
     const [page, setPage] = React.useState(0);
     const [rows, setRows] = React.useState(birthdays)
-    const [rowsPerPage, setRowsPerPage] = React.useState(5);
+    const rowsPerPage = 5;
     const [searched, setSearched] = React.useState<string>("");
 
     /**

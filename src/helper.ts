@@ -79,9 +79,9 @@ const markedAsFav = (
     if (favMap.has(date)) {
       let arr = favMap.get(date);
       let index = arr.findIndex(
-        (item: any) => item.text == event.text && item.year == event.year
+        (item: any) => item.text === event.text && item.year === event.year
       );
-      return index == -1 ? false : true;
+      return index === -1 ? false : true;
     } else {
       return false;
     }

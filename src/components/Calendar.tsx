@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import dayjs, { Dayjs } from "dayjs";
+import { Dayjs } from "dayjs";
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { CalendarPicker } from '@mui/x-date-pickers/CalendarPicker';

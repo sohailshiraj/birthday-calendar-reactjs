@@ -28,7 +28,6 @@ function App() {
    * @param date dayjs object
    */
   const getAllBirthdaysByDate = async (date: Dayjs) => {
-    let fav = getFavorites();
     SetCurrentDate(date)
     let url = `https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/births/${date.month() + 1}/${date.date()}`;
     SetBirthdays([])
@@ -48,22 +47,22 @@ function App() {
     //Add case
     if(!remove){
       if(favorites.has(date)) {
-        let index = favorites.get(date)?.findIndex((fav: any) => fav.text == event.text)
-        if(index == -1) map.set(date, [...(favorites.get(date) as []), event])
+        let index = favorites.get(date)?.findIndex((fav: any) => fav.text === event.text)
+        if(index === -1) map.set(date, [...(favorites.get(date) as []), event])
       }else{
         map.set(date, [event])
       }
 
       //update 'fav' for the icon on birthday list
       let updatedArr = birthdays.filter((bday) => {
-        if(bday.text == event.text) return bday.fav = true
+        if(bday.text === event.text) return bday.fav = true
         else return bday;
       });
       SetBirthdays(updatedArr)
     } else {
       //Remove case
       if(favorites.has(date)) {
-        let arr = favorites.get(date)?.filter((item: any) => item.text != event.text)
+        let arr = favorites.get(date)?.filter((item: any) => item.text !== event.text)
         if(arr?.length && arr.length > 0) {
           map.set(date, arr)
         }else {
@@ -72,7 +71,7 @@ function App() {
         
         //update 'fav' for the icon on birthday list
         let updatedArr = birthdays.filter((bday) => {
-          if(bday.text == event.text) delete bday.fav
+          if(bday.text === event.text) delete bday.fav
           
           return bday;
         });
